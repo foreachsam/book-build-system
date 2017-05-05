@@ -1,0 +1,10 @@
+$ tree demo-curl
+
+demo-curl/
+├── build
+│   ├── conanbuildinfo.cmake
+│   └── conaninfo.txt
+└── conanfile.txt
+
+1 directory, 3 files
+
