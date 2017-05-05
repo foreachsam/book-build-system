@@ -54,6 +54,5 @@ make
 ./bin/app
 
 #ls ~/.conan/data/
-#tree demo-curl
-
-
+#cd ..
+#tree .

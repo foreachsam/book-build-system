@@ -25,6 +25,8 @@ conan install .. --build missing
 
 #ls ~/.conan/data/
 
-tree demo-curl
+cd ..
+
+tree .
 
 
