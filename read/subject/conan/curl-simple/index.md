@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Conan Quick Start / curl simple demo
+title: Conan Quick Start / build curl simple demo
 description: >
-  Conan Quick Start / curl simple demo
+  Conan Quick Start / build curl simple demo
 date: 2017-05-05 18:44:57 +0800
 source_url: '/read/subject/conan/curl-simple/index.md'
 parent:
