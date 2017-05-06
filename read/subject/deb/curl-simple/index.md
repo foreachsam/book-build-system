@@ -82,6 +82,34 @@ $ dpkg -L libcurl4-openssl-dev | grep pc
 $ cat /usr/lib/x86_64-linux-gnu/pkgconfig/libcurl.pc
 ```
 
+### pkg-config
+
+$ man [pkg-config](http://manpages.ubuntu.com/manpages/xenial/en/man1/pkg-config.1.html)
+
+執行
+
+``` sh
+$ pkg-config --help
+```
+
+執行
+
+``` sh
+$ pkg-config --list-all | grep libcurl
+```
+
+顯示
+
+```
+libcurl                             libcurl - Library to transfer files with ftp, http, etc.
+```
+
+執行
+
+``` sh
+$ pkg-config --debug libcurl
+```
+
 執行
 
 ``` sh
@@ -93,6 +121,66 @@ $ pkg-config --cflags --libs libcurl
 ```
 -lcurl
 ```
+
+執行
+
+``` sh
+$ pkg-config --debug --cflags --libs libcurl
+```
+
+執行
+
+``` sh
+$ pkg-config --print-variables libcurl
+```
+
+顯示
+
+```
+exec_prefix
+includedir
+libdir
+pcfiledir
+prefix
+supported_features
+supported_protocols
+```
+
+執行
+
+``` sh
+$ pkg-config --variable=libdir libcurl
+```
+
+顯示
+
+```
+/usr/lib/x86_64-linux-gnu
+```
+
+執行
+
+``` sh
+for ITEM in $(pkg-config --print-variables libcurl); do
+	CMD="echo -n $ITEM="
+	$CMD
+	CMD="pkg-config --variable=$ITEM libcurl"
+	$CMD
+done
+```
+
+顯示
+
+```
+exec_prefix=/usr
+includedir=/usr/include
+libdir=/usr/lib/x86_64-linux-gnu
+pcfiledir=/usr/lib/x86_64-linux-gnu/pkgconfig
+prefix=/usr
+supported_features=SSL IPv6 UnixSockets libz AsynchDNS IDN GSS-API SPNEGO Kerberos NTLM NTLM_WB TLS-SRP
+supported_protocols=DICT FILE FTP FTPS GOPHER HTTP HTTPS IMAP IMAPS LDAP LDAPS POP3 POP3S RTMP RTSP SMB SMBS SMTP SMTPS TELNET TFTP
+```
+
 
 ### 產生專案資料夾
 

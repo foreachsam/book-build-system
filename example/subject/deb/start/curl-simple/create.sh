@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+
+## doc
+# https://foreachsam.github.io/book-build-system/read/subject/deb/curl-simple/
+
+
 ## libcurl4-openssl-dev
 # $ apt-cache search curl
 # $ apt-cache show curl
@@ -12,6 +17,8 @@ sudo apt-get install libcurl4-openssl-dev
 # $ dpkg -L libcurl4-openssl-dev | sort
 # $ dpkg -L libcurl4-openssl-dev | grep pc
 # /usr/lib/x86_64-linux-gnu/pkgconfig/libcurl.pc
+# $ pkg-config --list-all | grep curl
+# libcurl                             libcurl - Library to transfer files with ftp, http, etc.
 
 
 ## demo-curl
@@ -42,4 +49,6 @@ chmod u+x build.sh
 
 ./build.sh
 
+
+## app
 ./app
