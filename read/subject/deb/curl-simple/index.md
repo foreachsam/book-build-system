@@ -107,6 +107,19 @@ libcurl                             libcurl - Library to transfer files with ftp
 執行
 
 ``` sh
+pkg-config --exists libcurl
+echo $?
+```
+
+顯示
+
+```
+0
+```
+
+執行
+
+``` sh
 $ pkg-config --debug libcurl
 ```
 
